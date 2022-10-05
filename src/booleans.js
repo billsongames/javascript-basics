@@ -19,43 +19,55 @@ function one(a, b) {
 }
 
 function truthiness(a) {
-  return a.length > 0 || a > 0 || (Array.isArray(a) && a.length == 0);
+  return (
+    a.length > 0 ||
+    a > 0 ||
+    (Array.isArray(a) && a.length === 0) ||
+    typeof a === 'object'
+  );
 }
 
 function isEqual(a, b) {
-  // your code here
+  return a === b
 }
 
 function isGreaterThan(a, b) {
-  // your code here
+  return a  > b
 }
 
 function isLessThanOrEqualTo(a, b) {
-  // your code here
+  return a <= b;
 }
 
 function isOdd(a) {
-  // your code here
+  return a % 2 == 1;
 }
 
 function isEven(a) {
-  // your code here
+  return a % 2 ==0;
 }
 
 function isSquare(a) {
-  // your code here
+  return Number.isInteger(Math.sqrt(a))
 }
 
 function startsWith(char, string) {
-  // your code here
+  return char === string.charAt(0);
 }
 
 function containsVowels(string) {
-  // your code here
+  if (string.match(/[aeiou]/gi)) {
+    return true;
+  }
+  return false;
 }
 
 function isLowerCase(string) {
-  // your code here
+  string.replace(/\d+/g, '');
+  if (string.toLowerCase() === string) {
+    return true;
+  }
+  return false;
 }
 
 module.exports = {
