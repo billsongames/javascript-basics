@@ -19,12 +19,7 @@ function one(a, b) {
 }
 
 function truthiness(a) {
-  return (
-    a.length > 0 ||
-    a > 0 ||
-    (Array.isArray(a) && a.length === 0) ||
-    typeof a === 'object'
-  );
+  return Boolean(a);
 }
 
 function isEqual(a, b) {
